@@ -20,10 +20,10 @@
     --popover: 0 0% 100%;
     --popover-foreground: 220 15% 15%;
 
-    /* Primary - Deep blue */
-    --primary: 221 83% 53%;
+    /* Primary - Orange theme */
+    --primary: 25 95% 53%;
     --primary-foreground: 0 0% 100%;
-    --primary-glow: 221 83% 63%;
+    --primary-glow: 25 95% 63%;
 
     /* Secondary - Light blue accent */
     --secondary: 220 60% 96%;

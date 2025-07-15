@@ -4,46 +4,39 @@ import { Card, CardContent } from '@/components/ui/card';
 const Portfolio = () => {
   const skills = [
     {
-      category: 'Computer Vision',
-      icon: Eye,
-      description: 'Deep learning models for image processing and analysis',
-      technologies: ['OpenCV', 'TensorFlow', 'PyTorch', 'YOLO', 'CNNs'],
-      color: 'text-blue-600'
+      category: 'Programming Languages',
+      icon: Cpu,
+      description: 'Core programming languages for data science and engineering',
+      technologies: ['Python', 'SQL', 'MATLAB'],
+      color: 'text-primary'
     },
     {
-      category: 'Reinforcement Learning',
+      category: 'AI Framework',
       icon: Brain,
-      description: 'Intelligent agents and decision-making systems',
-      technologies: ['DQN', 'Policy Gradients', 'Actor-Critic', 'Multi-Agent RL'],
-      color: 'text-purple-600'
-    },
-    {
-      category: 'Data Engineering & SQL',
-      icon: Database,
-      description: 'Data pipeline design and database optimization',
-      technologies: ['PostgreSQL', 'ETL', 'Apache Spark', 'Data Warehousing'],
-      color: 'text-green-600'
-    },
-    {
-      category: 'Signal Processing',
-      icon: Radio,
-      description: 'Wireless communication and signal analysis',
-      technologies: ['MATLAB', 'DSP', 'Communication Systems', 'MIMO'],
+      description: 'Deep learning and AI development frameworks',
+      technologies: ['PyTorch', 'TensorFlow', 'LangChain'],
       color: 'text-orange-600'
     },
     {
-      category: 'Machine Learning',
-      icon: Cpu,
-      description: 'End-to-end ML solutions and model deployment',
-      technologies: ['Scikit-learn', 'LangChain', 'Google PaLM', 'MLOps'],
-      color: 'text-red-600'
+      category: 'Data Science & AI',
+      icon: Eye,
+      description: 'Advanced AI and machine learning specializations',
+      technologies: ['Computer Vision', 'Generative AI', 'Natural Language Processing', 'Signal Processing', 'Reinforcement Learning'],
+      color: 'text-blue-600'
     },
     {
-      category: 'Data Analytics',
-      icon: BarChart3,
-      description: 'Statistical analysis and business intelligence',
-      technologies: ['Python', 'R', 'Tableau', 'Portfolio Optimization'],
-      color: 'text-teal-600'
+      category: 'Computing',
+      icon: Database,
+      description: 'Cloud computing and distributed systems',
+      technologies: ['Amazon Web Services', 'GPU Computing', 'Distributed Computing'],
+      color: 'text-green-600'
+    },
+    {
+      category: 'Development Tools',
+      icon: Radio,
+      description: 'Version control and containerization tools',
+      technologies: ['Git', 'Docker'],
+      color: 'text-purple-600'
     }
   ];
 
