@@ -52,68 +52,67 @@ const Experience = () => {
           </div>
 
           {/* Experience Timeline */}
-          <div className="space-y-8">
-            {experiences.map((exp, index) => (
-              <Card key={index} className="card-glass hover-lift group relative">
-                <CardContent className="p-8">
-                  <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-6">
-                    {/* Main Content */}
-                    <div className="flex-1">
-                      <div className="flex items-start gap-4 mb-4">
-                        <div className="p-3 rounded-lg bg-gradient-to-br from-primary/10 to-accent/10">
-                          <Building className="h-6 w-6 text-primary" />
-                        </div>
-                        <div>
-                          <h3 className="text-xl font-bold text-foreground mb-1">
-                            {exp.title}
-                          </h3>
-                          <p className="text-lg font-semibold text-primary mb-2">
-                            {exp.company}
-                          </p>
-                          <div className="flex flex-wrap gap-4 text-sm text-muted-foreground">
-                            <div className="flex items-center gap-1">
-                              <Calendar className="h-4 w-4" />
-                              {exp.period}
+          <div className="relative">
+            {/* Timeline Line */}
+            <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-primary via-primary to-primary/20 hidden md:block"></div>
+            
+            <div className="space-y-12">
+              {experiences.map((exp, index) => (
+                <div key={index} className="relative">
+                  {/* Timeline Dot */}
+                  <div className="absolute left-6 top-6 w-4 h-4 bg-primary rounded-full border-4 border-background shadow-lg z-10 hidden md:block"></div>
+                  
+                  {/* Content Card */}
+                  <div className="md:ml-20">
+                    <Card className="card-glass hover-lift group">
+                      <CardContent className="p-6">
+                        <div className="space-y-4">
+                          {/* Header */}
+                          <div>
+                            <h3 className="text-xl font-bold text-foreground mb-1">
+                              {exp.title}
+                            </h3>
+                            <p className="text-lg font-semibold text-primary mb-2">
+                              {exp.company}
+                            </p>
+                            <div className="flex flex-wrap gap-4 text-sm text-muted-foreground">
+                              <div className="flex items-center gap-1">
+                                <Calendar className="h-4 w-4" />
+                                {exp.period}
+                              </div>
+                              <div className="flex items-center gap-1">
+                                <MapPin className="h-4 w-4" />
+                                {exp.location}
+                              </div>
                             </div>
-                            <div className="flex items-center gap-1">
-                              <MapPin className="h-4 w-4" />
-                              {exp.location}
+                          </div>
+
+                          {/* Description */}
+                          <p className="text-muted-foreground leading-relaxed">
+                            {exp.description}
+                          </p>
+
+                          {/* Key Terms */}
+                          <div className="space-y-2">
+                            <h4 className="font-medium text-foreground text-sm">Key Terms:</h4>
+                            <div className="flex flex-wrap gap-2">
+                              {exp.keyTerms.map((term, termIndex) => (
+                                <span
+                                  key={termIndex}
+                                  className="px-3 py-1 bg-primary/10 text-primary text-xs rounded-full font-medium hover:bg-primary/20 transition-colors duration-200"
+                                >
+                                  {term}
+                                </span>
+                              ))}
                             </div>
                           </div>
                         </div>
-                      </div>
-
-                      <p className="text-muted-foreground mb-6 leading-relaxed">
-                        {exp.description}
-                      </p>
-
-                      {/* Key Terms */}
-                      <div className="space-y-2">
-                        <h4 className="font-medium text-foreground text-sm">Key Terms:</h4>
-                        <div className="flex flex-wrap gap-2">
-                          {exp.keyTerms.map((term, termIndex) => (
-                            <span
-                              key={termIndex}
-                              className="px-3 py-1 bg-primary/10 text-primary text-xs rounded-full font-medium hover:bg-primary/20 transition-colors duration-200"
-                            >
-                              {term}
-                            </span>
-                          ))}
-                        </div>
-                      </div>
-                    </div>
-
-                    {/* Timeline Indicator */}
-                    <div className="hidden lg:flex flex-col items-center">
-                      <div className="w-4 h-4 bg-primary rounded-full shadow-lg"></div>
-                      {index < experiences.length - 1 && (
-                        <div className="w-0.5 h-24 bg-gradient-to-b from-primary to-primary/20 mt-2"></div>
-                      )}
-                    </div>
+                      </CardContent>
+                    </Card>
                   </div>
-                </CardContent>
-              </Card>
-            ))}
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </div>

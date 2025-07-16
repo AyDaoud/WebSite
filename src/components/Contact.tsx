@@ -56,12 +56,6 @@ const Contact = () => {
       label: 'Email',
       value: 'aymendaoud1499@gmail.com',
       href: 'mailto:aymendaoud1499@gmail.com'
-    },
-    {
-      icon: MapPin,
-      label: 'Location',
-      value: 'Hammamet, Tunisia / Montreal, Canada',
-      href: null
     }
   ];
 

@@ -1,4 +1,4 @@
-import { GraduationCap, MapPin, Users, Calendar } from 'lucide-react';
+import { GraduationCap, MapPin, Calendar } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 
 const About = () => {
@@ -23,20 +23,6 @@ const About = () => {
     }
   ];
 
-  const community = [
-    {
-      role: 'Chairman',
-      organization: 'NATEG EPT Chapter',
-      period: '2021–2022',
-      icon: Users
-    },
-    {
-      role: 'Member',
-      organization: 'ACM EPT',
-      period: '2020–2021',
-      icon: Users
-    }
-  ];
 
   return (
     <section id="about" className="section-padding bg-background">
@@ -48,10 +34,7 @@ const About = () => {
               About Me
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-              AI Research Assistant at REMI and MSc student at ÉTS, Montreal. Passionate about AI, 
-              machine learning, data engineering, and wireless communication. Multilingual 
-              (Arabic, French, English) and experienced in research-driven roles across 
-              academic and industry settings.
+              AI enthusiast blending research and real-world impact. Currently diving deep into machine learning and wireless systems at REMI Lab. Passionate about turning code into intelligent solutions.
             </p>
           </div>
 
@@ -95,36 +78,8 @@ const About = () => {
               </div>
             </div>
 
-            {/* Community Involvement Section */}
+            {/* Languages & Skills */}
             <div className="space-y-8">
-              <div className="flex items-center mb-8">
-                <Users className="h-8 w-8 text-primary mr-4" />
-                <h3 className="text-2xl font-bold text-foreground">Community Involvement</h3>
-              </div>
-
-              <div className="space-y-6">
-                {community.map((item, index) => (
-                  <Card key={index} className="card-glass hover-lift">
-                    <CardContent className="p-6">
-                      <div className="flex items-center mb-3">
-                        <item.icon className="h-6 w-6 text-primary mr-3" />
-                        <h4 className="font-semibold text-lg text-foreground">
-                          {item.role}
-                        </h4>
-                      </div>
-                      <p className="text-muted-foreground mb-2">
-                        {item.organization}
-                      </p>
-                      <p className="text-sm text-muted-foreground flex items-center">
-                        <Calendar className="h-4 w-4 mr-2" />
-                        {item.period}
-                      </p>
-                    </CardContent>
-                  </Card>
-                ))}
-              </div>
-
-              {/* Languages & Skills */}
               <Card className="card-glass">
                 <CardContent className="p-6">
                   <h4 className="font-semibold text-lg text-foreground mb-4">
