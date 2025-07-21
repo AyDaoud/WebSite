@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { Link, useNavigate, useLocation } from 'react-router-dom';
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -15,17 +16,33 @@ const Navbar = () => {
   }, []);
 
   const navItems = [
-    { label: 'Home', href: '#home' },
-    { label: 'About', href: '#about' },
-    { label: 'Portfolio', href: '#portfolio' },
-    { label: 'Projects', href: '#projects' },
-    { label: 'Contact', href: '#contact' },
+    { label: 'Home', href: '#home', type: 'scroll' },
+    { label: 'About', href: '#about', type: 'scroll' },
+    { label: 'Portfolio', href: '#portfolio', type: 'scroll' },
+    { label: 'Projects', href: '/projects', type: 'route' },
+    { label: 'Experience', href: '/experience', type: 'route' },
+    { label: 'Contact', href: '/contact', type: 'route' },
   ];
 
   const scrollToSection = (href: string) => {
     const element = document.querySelector(href);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
+    }
+    setIsMobileMenuOpen(false);
+  };
+
+  const navigate = useNavigate();
+  const location = useLocation();
+  const handleNav = (item) => {
+    if (item.type === 'scroll') {
+      if (location.pathname !== '/') {
+        navigate('/', { state: { scrollTo: item.href } });
+      } else {
+        scrollToSection(item.href);
+      }
+    } else {
+      navigate(item.href);
     }
     setIsMobileMenuOpen(false);
   };
@@ -50,7 +67,7 @@ const Navbar = () => {
             {navItems.map((item) => (
               <button
                 key={item.label}
-                onClick={() => scrollToSection(item.href)}
+                onClick={() => handleNav(item)}
                 className="text-muted-foreground hover:text-primary transition-colors duration-200 font-medium"
               >
                 {item.label}
@@ -84,7 +101,7 @@ const Navbar = () => {
               {navItems.map((item) => (
                 <button
                   key={item.label}
-                  onClick={() => scrollToSection(item.href)}
+                  onClick={() => handleNav(item)}
                   className="text-left text-muted-foreground hover:text-primary transition-colors duration-200 font-medium"
                 >
                   {item.label}

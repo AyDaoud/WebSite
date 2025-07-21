@@ -93,16 +93,12 @@ const Portfolio = () => {
           {/* Additional Stats or Highlights */}
           <div className="mt-16 grid md:grid-cols-3 gap-8">
             <div className="text-center">
-              <div className="text-4xl font-bold text-gradient mb-2">5+</div>
+              <div className="text-4xl font-bold text-gradient mb-2">3+</div>
               <p className="text-muted-foreground">Years of Experience</p>
             </div>
             <div className="text-center">
-              <div className="text-4xl font-bold text-gradient mb-2">20+</div>
+              <div className="text-4xl font-bold text-gradient mb-2">10+</div>
               <p className="text-muted-foreground">Projects Completed</p>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-gradient mb-2">3</div>
-              <p className="text-muted-foreground">Research Publications</p>
             </div>
           </div>
         </div>

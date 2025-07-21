@@ -2,6 +2,7 @@ import { GraduationCap, MapPin, Calendar } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 
 const About = () => {
+
   const education = [
     {
       degree: 'MSc Degree',
@@ -10,16 +11,16 @@ const About = () => {
       status: 'Current'
     },
     {
-      degree: 'Engineering in Signals & Systems',
+      degree: 'B.Eng in Signals & Systems',
       institution: 'École Polytechnique de Tunisie',
       period: '2020 – 2023',
       status: 'Completed'
     },
     {
-      degree: 'Preparatory Institute',
-      institution: 'Tunisia',
+      degree: 'Diploma in Preparatory Engineering Studies',
+      institution: 'Preparatory Institute for Engineering Studies of Tunis',
       period: '2018 – 2020',
-      status: 'Top 5%'
+      status: 'Completed'
     }
   ];
 
@@ -76,27 +77,6 @@ const About = () => {
                   </Card>
                 ))}
               </div>
-            </div>
-
-            {/* Languages & Skills */}
-            <div className="space-y-8">
-              <Card className="card-glass">
-                <CardContent className="p-6">
-                  <h4 className="font-semibold text-lg text-foreground mb-4">
-                    Languages
-                  </h4>
-                  <div className="flex flex-wrap gap-3">
-                    {['Arabic', 'French', 'English'].map((lang) => (
-                      <span
-                        key={lang}
-                        className="px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium"
-                      >
-                        {lang}
-                      </span>
-                    ))}
-                  </div>
-                </CardContent>
-              </Card>
             </div>
           </div>
         </div>

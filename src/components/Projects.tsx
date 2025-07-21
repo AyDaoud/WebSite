@@ -10,7 +10,8 @@ const Projects = () => {
       technologies: ['Python', 'Deep RL', 'TensorFlow', 'Wireless Networks', 'MATLAB'],
       icon: Wifi,
       category: 'Research',
-      featured: true
+      featured: true,
+      repoUrl: 'https://github.com/AyDaoud/RL_Power_Allocation-or-Reinforcement-Learning-Power-Allocation'
     },
     {
       title: 'LLM Q&A System using Google PaLM & LangChain',
@@ -18,7 +19,8 @@ const Projects = () => {
       technologies: ['Python', 'LangChain', 'Google PaLM', 'NLP', 'API Integration'],
       icon: Lightbulb,
       category: 'AI/ML',
-      featured: true
+      featured: true,
+      repoUrl: 'https://github.com/AyDaoud/LLM_langchain'
     },
     {
       title: 'Dynamic Portfolio Optimization',
@@ -26,7 +28,8 @@ const Projects = () => {
       technologies: ['Python', 'Machine Learning', 'Financial Modeling', 'Optimization'],
       icon: TrendingUp,
       category: 'Finance',
-      featured: true
+      featured: true,
+      repoUrl: 'https://github.com/AyDaoud/Portfolio-Optimization'
     },
     {
       title: 'Java-based Mobile Car Rental App',
@@ -34,7 +37,8 @@ const Projects = () => {
       technologies: ['Java', 'Android Studio', 'SQLite', 'REST API', 'Mobile UI/UX'],
       icon: Smartphone,
       category: 'Mobile Dev',
-      featured: false
+      featured: false,
+      repoUrl: 'https://github.com/AyDaoud/Mobile-application-for-renting-cars'
     }
   ];
 
@@ -104,10 +108,12 @@ const Projects = () => {
                         </div>
 
                         <div className="flex gap-3 pt-2">
-                          <Button size="sm" variant="outline" className="flex-1">
-                            <Github className="h-4 w-4 mr-2" />
-                            Code
-                          </Button>
+                          <a href={project.repoUrl} target="_blank" rel="noopener noreferrer" className="flex-1">
+                            <Button size="sm" variant="outline" className="w-full">
+                              <Github className="h-4 w-4 mr-2" />
+                              Code
+                            </Button>
+                          </a>
                           <Button size="sm" className="flex-1">
                             <ExternalLink className="h-4 w-4 mr-2" />
                             Demo
@@ -151,9 +157,11 @@ const Projects = () => {
                         </div>
 
                         <div className="md:w-1/6 flex justify-end gap-2">
-                          <Button size="sm" variant="outline">
-                            <Github className="h-4 w-4" />
-                          </Button>
+                          <a href={project.repoUrl} target="_blank" rel="noopener noreferrer">
+                            <Button size="sm" variant="outline">
+                              <Github className="h-4 w-4" />
+                            </Button>
+                          </a>
                           <Button size="sm">
                             <ExternalLink className="h-4 w-4" />
                           </Button>
