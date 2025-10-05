@@ -40,13 +40,12 @@ const Hero = () => {
 
           {/* Subtitle */}
           <p className="text-xl md:text-2xl text-white/90 mb-8 opacity-0 animate-fade-in-up stagger-3">
-            AI Research Assistant & MSc Student
+          AI Researcher | Machine Learning Engineer
           </p>
 
           {/* Tagline */}
           <p className="text-lg text-white/80 mb-12 max-w-2xl mx-auto opacity-0 animate-fade-in-up stagger-4">
-            Turning AI research into real-world impact through machine learning, 
-            computer vision, and wireless communication innovation.
+
           </p>
 
           {/* CTA Buttons */}
