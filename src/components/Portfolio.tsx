@@ -1,4 +1,4 @@
-import { Brain, Database, Eye, Radio, Cpu, BarChart3 } from 'lucide-react';
+import { Brain, Database, Eye, Radio, Cpu, Server } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 
 const Portfolio = () => {
@@ -34,9 +34,16 @@ const Portfolio = () => {
     {
       category: 'Development Tools',
       icon: Radio,
-      description: 'Version control and containerization tools',
+      description: 'Version control, and containerization tools',
       technologies: ['Git', 'Docker'],
       color: 'text-purple-600'
+    },
+    {
+      category: 'API Development Tools',
+      icon: Server,
+      description: '                     ',
+      technologies: ['FastAPI', 'Supbase'],
+      color: 'text-gray-600'
     }
   ];
 
